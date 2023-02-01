@@ -1,0 +1,26 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  background: linear-gradient(aqua, royalblue);
+}
+
+.content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  height: 100%;
+  padding: 10px 0;
+}
