@@ -1,9 +1,9 @@
 import Button from "../UI/Button";
 
-function TodosActions({ resetTodos }) {
+function TodosActions({ clearTodos }) {
   return (
     <div className='button-clear'>
-      <Button title='Clear All' onClick={resetTodos}>
+      <Button title='Clear All' onClick={clearTodos}>
         Clear All
       </Button>
     </div>

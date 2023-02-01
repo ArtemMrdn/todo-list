@@ -20,17 +20,17 @@ function App() {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
-  const resetTodosHandler = () => {
+  const clearTodosHandler = () => {
     setTodos([]);
   };
 
   return (
     <div className='App'>
-      <div className='cart'>
-        <div className='content'>
+      <div className='card'>
+        <div className='card-content'>
           <TodoForm addTodo={addTodoHandler} />
           <TodoList todos={todos} deleteTodo={deleteTodoHandler} />
-          <TodosActions resetTodos={resetTodosHandler} />
+          <TodosActions clearTodos={clearTodosHandler} />
         </div>
       </div>
     </div>
