@@ -26,10 +26,12 @@ function App() {
 
   return (
     <div className='App'>
-      <div className='content'>
-        <TodoForm addTodo={addTodoHandler} />
-        <TodoList todos={todos} deleteTodo={deleteTodoHandler} />
-        <TodosActions resetTodos={resetTodosHandler} />
+      <div className='cart'>
+        <div className='content'>
+          <TodoForm addTodo={addTodoHandler} />
+          <TodoList todos={todos} deleteTodo={deleteTodoHandler} />
+          <TodosActions resetTodos={resetTodosHandler} />
+        </div>
       </div>
     </div>
   );

@@ -2,11 +2,11 @@ import Button from "../UI/Button";
 
 function TodosActions({ resetTodos }) {
   return (
-    <>
-      <Button title='Reset Todos' onClick={resetTodos}>
+    <div className='button-clear'>
+      <Button title='Clear All' onClick={resetTodos}>
         Clear All
       </Button>
-    </>
+    </div>
   );
 }
 
