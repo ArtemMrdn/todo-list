@@ -24,13 +24,42 @@ function App() {
     setTodos([]);
   };
 
+  const toggleTodoHandler = (id) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id
+          ? { ...todo, isCompleted: !todo.isCompleted }
+          : { ...todo }
+      )
+    );
+  };
+
+  const resetTodosHandler = () => {
+    setTodos([]);
+  };
+
+  const deleteCompletedTodosHandler = () => {
+    setTodos(todos.filter((todo) => !todo.isCompleted));
+  };
+
   return (
     <div className='App'>
       <div className='card'>
         <div className='card-content'>
-          <TodoForm addTodo={addTodoHandler} />
-          <TodoList todos={todos} deleteTodo={deleteTodoHandler} />
-          <TodosActions clearTodos={clearTodosHandler} />
+          <TodoForm
+            addTodo={addTodoHandler}
+            resetTodos={resetTodosHandler}
+            deleteCompletedTodos={deleteCompletedTodosHandler}
+          />
+          <TodoList
+            todos={todos}
+            deleteTodo={deleteTodoHandler}
+            toggleTodo={toggleTodoHandler}
+          />
+          <TodosActions
+            clearTodos={clearTodosHandler}
+            deleteCompletedTodos={deleteCompletedTodosHandler}
+          />
         </div>
       </div>
     </div>
